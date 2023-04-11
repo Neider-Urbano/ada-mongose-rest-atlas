@@ -1,0 +1,11 @@
+@api=http://localhost:4000
+
+### GETWelcome
+GET {{api}}
+Content-Type: application/json
+
+### GET List
+GET {{api}}/list
+Content-Type: application/json
+
+
