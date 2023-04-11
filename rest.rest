@@ -1,11 +1,53 @@
 @api=http://localhost:4000
 
-### GETWelcome
+### GET Welcome
 GET {{api}}
 Content-Type: application/json
 
-### GET List
+### GET List Tasks
 GET {{api}}/list
 Content-Type: application/json
 
+### GET Task for id
+GET {{api}}/list/6435e85da4a4e950ccae3e3f
+Content-Type: application/json
 
+
+### POST create Task sin state
+POST {{api}}/list
+Content-Type: application/json
+
+{
+    "name":"otro"
+}
+
+### POST create Task con state
+POST {{api}}/list
+Content-Type: application/json
+
+{
+    "name":"JUGAR BEISBOL",
+    "state": "COMPLETED"
+}
+
+### POST create Task con errors
+POST {{api}}/list
+Content-Type: application/json
+
+{
+    "name":"jaja",
+    "state": ""
+}
+
+### DELETE Task for id
+DELETE {{api}}/list?id=6435ebaa83b5467db465d275
+Content-Type: application/json
+
+
+### PUT Task for id
+PUT {{api}}/list/6435ebfa83b5467db465d27e
+Content-Type: application/json
+
+{
+    "name":"cambiandolo"
+}

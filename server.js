@@ -14,7 +14,8 @@ app.get("/", function (req, res) {
 });
 
 app.listen(port, async () => {
-  conecctDb()
+  console.log("listening on port " + port);
+  await conecctDb()
     .then(() => {
       console.log("Connected to MongoDB");
     })
@@ -22,5 +23,4 @@ app.listen(port, async () => {
       console.log("Couldn't connect to MongoDB");
       console.log(error);
     });
-  console.log("listening on port " + port);
 });
